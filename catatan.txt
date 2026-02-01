@@ -1,0 +1,20 @@
+open esp-idf: get_idf
+
+Make New Project: idf.py create-project -p . <project-name>
+
+Setup device:
+- idf.py menuconfig (advanced setup)
+- idf.py --list-targets (show chip series target)
+- idf.py set-target (default setup by chip series)
+
+Build: idf.py build
+
+clearing the build directory: idf.py fullclean
+
+List COM Port: ls /dev/tty*
+
+Open Monitor: idf.py monitor
+
+Flash to MCU: idf.py -p <COM3> -b <baudrate> flash monitor
+
+idf.py -p /dev/ttyUSB0 flash monitor
